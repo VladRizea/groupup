@@ -42,6 +42,7 @@
             .catch(function (error) {
                 console.log(error);
             }); 
+            this.$router.push({ path: '/myprojects', query: {}})
             }
         }
     }

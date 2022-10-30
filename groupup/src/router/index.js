@@ -56,6 +56,22 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/DebateSingleActivity.vue')
+    },
+    {
+      path: '/myprojects',
+      name: 'myprojects',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/MyProjects.vue')
+    },
+    {
+      path: '/debatecandidate',
+      name: 'debatecandidate',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/DebateCandidate.vue')
     }
   ]
 })

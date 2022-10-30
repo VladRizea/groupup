@@ -10,6 +10,7 @@
         <input v-model="password" class="text-input" type="password">
         <br>
         <input class="classic-input" v-on:click="login()" type="button" value="Login">
+        <input class="classic-input" type="button" value="Register" v-on:click="register()">
         </form>
     </div>
 </template>
@@ -35,7 +36,11 @@
             .catch(function (error) {
                 console.log(error);
             }); 
-            }
+            },
+            
+        },
+        methods: {
+            register: function(){this.$router.push({ path: '/register', query: {}})}
         }
     }
 </script>

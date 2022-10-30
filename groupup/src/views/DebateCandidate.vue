@@ -13,6 +13,10 @@
             <br>
             <input v-model="text" class="text-input" type="text">
             <br>
+            <p class="classic-text">Price</p>
+            <br>
+            <input v-model="price" class="text-input" type="number">
+            <br>
             <p class="classic-text">Photo</p>
             <br>
             <input class="text-input" type="file">
@@ -40,7 +44,7 @@
                 upvote:'',
                 downvote:'',
                 price:'',
-                state:'vote',
+                state:'initial',
                 title:'Propose something for the actvity on screen'
             }
         },

@@ -1,15 +1,19 @@
 <template>
     <div class="big-wrapper flex-center-column">
-        <h1 id="main-title" >Login</h1>
+        <h1 id="main-title" >Create a new Plan</h1>
         <form action="" class="flex-center-column ">
-        <p class="classic-text">Enter your email</p>
+        <p class="classic-text"> Plan name</p>
         <br>
-        <input v-model="name" class="text-input" type="email" >
-        <p class="classic-text">Enter your password</p>
+        <input v-model="name" class="text-input" type="text" >
+        <p class="classic-text">Plan start date</p>
         <br>
-        <input v-model="password" class="text-input" type="password">
+        <input v-model="start" class="text-input" type="date">
         <br>
-        <input class="classic-input" v-on:click="login()" type="button" value="Login">
+        <p class="classic-text">Plan end date</p>
+        <br>
+        <input v-model="end" class="text-input" type="date">
+        <br>
+        <input class="classic-input" v-on:click="createProject()" type="button" value="Create">
         </form>
     </div>
 </template>
@@ -19,14 +23,17 @@
     export default {
         data() {
             return {
-            email: '',
             name: '',
+            start: '',
+            end: ''
             }
         },
         methods: {
-            login: function(){
+            createProject: function(){
+                console.log(this.name, this.start, this.end)
             axios.post('http://127.0.0.1:8000/api/login', {
-                email: this.email,
+                end: this.end,
+                start: this.start,
                 name: this.name,
             })
             .then(function (response) {
@@ -42,5 +49,4 @@
 
 <style scoped>
     @import '../assets/main.css';
-    
 </style>

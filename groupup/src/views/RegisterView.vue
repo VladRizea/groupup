@@ -15,13 +15,13 @@
         <br>
         <input v-model="passwordsecond" class="text-input" type="password">
         <br>
-        <input class="classic-input" v-on:click="click()" type="button" value="Register">
+        <input class="classic-input" v-on:click="register()" type="button" value="Register">
         </form>
     </div>
   </template>
   
   <script>
-  import axios from 'a'
+  import axios from 'axios'
     export default {
         data() {
             return {
@@ -32,12 +32,12 @@
             }
         },
         methods: {
-            click: function(){
-            axios.post('http://127.0.0.1:8000/api/login', {
+            register: function(){
+            axios.post('http://127.0.0.1:8000/api/regiser', {
                 email: this.email,
                 name: this.name,
                 password: this.password,
-                passwordsecond: this.passwordsecond
+                password_confirmation: this.passwordsecond
             })
             .then(function (response) {
                 console.log(response);
@@ -46,7 +46,6 @@
                 console.log(error);
             }); 
             }
-
         }
     }
 

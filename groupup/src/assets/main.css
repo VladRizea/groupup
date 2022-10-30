@@ -33,7 +33,7 @@ outline: none;
 }
 
 .big-wrapper{
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 
 }
@@ -43,10 +43,15 @@ outline: none;
   align-items: center;
   flex-direction: column;
 }
+.flex-center-column-top{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .classic-input{
   font-size: 30px;
   padding: 0 20px;
-  background-color: #36CA00;
+  background-color: #06D6A0;
   border-radius: 2000px;
   border: none;
   margin: 30px;
@@ -63,6 +68,11 @@ outline: none;
 
 #main-title{
   font-size: 100px;
+  text-align: center;
+}
+.small-title{
+  font-size: 50px;
+  text-align: center;
 }
 .classic-text{
   font-size: 20px;

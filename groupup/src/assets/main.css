@@ -22,3 +22,48 @@ a,
 
 
 }
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+input:focus{
+outline: none;
+}
+
+.big-wrapper{
+  height: 100vh;
+  width: 100vw;
+
+}
+.flex-center-column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.classic-input{
+  font-size: 30px;
+  padding: 0 20px;
+  background-color: #36CA00;
+  border-radius: 2000px;
+  border: none;
+  margin: 30px;
+}
+
+.classic-input:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.text-input{
+  font-size: 34px;
+}
+
+#main-title{
+  font-size: 100px;
+}
+.classic-text{
+  font-size: 20px;
+}
